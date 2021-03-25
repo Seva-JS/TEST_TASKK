@@ -1,12 +1,18 @@
 import React from 'react';
 import '../styles/App.css';
+import Slider from "./slider"
+
  
 class App extends React.Component{
+  constructor(){
+    super()
+    
+  }
   render(){
     return (
-      <div>
-         <h1>WebPACK</h1>
-      </div>
+  
+     <Slider/>
+      
     );
   }
 }

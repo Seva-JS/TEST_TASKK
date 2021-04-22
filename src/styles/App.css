@@ -1,19 +1,19 @@
 .sliderr {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    scroll-behavior: smooth;
 
 }
 
 .image {
-    height: 350px;
-    width: 350px;
-    border-radius: 25px;
+    margin-top: 5px;
+    height: 200px;
+    width: 200px;
+    border-radius: 45px;
     scroll-behavior: smooth;
+    text-align: center;
+    
 
 
 }
@@ -39,3 +39,27 @@
     user-select: none;
 
 }
+.buttons{
+margin: 10px;
+height: 40px;
+width: 40px;
+border-radius: 25px;
+border: none;
+background-color: yellow;
+
+
+
+}
+.buttons-selector{
+   text-align: center;
+}
+.slide {
+    opacity: 0;
+    transition-duration: 1 s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }

@@ -12,6 +12,26 @@ const Slider = ({ slides }) => {
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
+  const changeColor = () => {
+    if (current === 0) {debugger
+      var bt = document.getElementById("bt1");
+      bt.style.backgroundColor = "red";
+      var otherBt =document.querySelectorAll('button')
+      otherBt.style.backgroundColor = "white";
+    } else if (current === 1) {
+      var bt = document.getElementById("bt2");
+      bt.style.backgroundColor = "red";
+    } else if (current === 2) {
+      var bt = document.getElementById("bt3");
+      bt.style.backgroundColor = "red";
+    } else if (current === 3) {
+      var bt = document.getElementById("bt4");
+      bt.style.backgroundColor = "red";
+    } else if (current === 4) {
+      var bt = document.getElementById("bt5");
+      bt.style.backgroundColor = "red";
+    }
+  };
 
   return (
     <div>
@@ -34,36 +54,61 @@ const Slider = ({ slides }) => {
         })}
       </div>
 
-      <ul class="dots">
+      <ul className="dots">
         <button
-          class="dots__item"
-          onClick={(e) => {
+          className="dots__item"
+          id="bt1"
+          style={{ backgroundColor: "white" }}
+          onMouseDown={(e) => {
             setCurrent(0);
           }}
+          onMouseUp={
+            (e) => {changeColor();}
+          }
         ></button>
         <button
-          class="dots__item"
-          onClick={(e) => {
+          className="dots__item"
+          id="bt2"
+          style={{ backgroundColor: "white" }}
+          onMouseDown={(e) => {
             setCurrent(1);
           }}
+          onMouseUp={
+            (e) => {changeColor();}
+          }
         ></button>
         <button
-          class="dots__item"
-          onClick={(e) => {
+          className="dots__item"
+          id="bt3"
+          style={{ backgroundColor: "white" }}
+          onMouseDown={(e) => {
             setCurrent(2);
           }}
+          onMouseUp={
+            (e) => {changeColor();}
+          }
         ></button>
         <button
-          class="dots__item"
-          onClick={(e) => {
+          className="dots__item"
+          id="bt4"
+          style={{ backgroundColor: "white" }}
+          onMouseDown={(e) => {
             setCurrent(3);
           }}
+          onMouseUp={
+            (e) => {changeColor();}
+          }
         ></button>
         <button
-          class="dots__item"
-          onClick={(e) => {
+          className="dots__item"
+          style={{ backgroundColor: "white" }}
+          id="bt5"
+          onMouseDown={(e) => {
             setCurrent(4);
           }}
+          onMouseUp={
+            (e) => {changeColor();}
+          }
         ></button>
       </ul>
     </div>
